@@ -20,6 +20,12 @@
 
 @property (nonatomic, strong) id<TutorialViewDelegate>delegate;
 
+
+/**
+ * @brief Initial TutorialView with LeftText and rightText.
+ * @param LeftText left navigation item text.
+ * @param rightText right navigation item text
+ */
 - (id) initWithFrame:(CGRect)frame LeftText:(NSString *)leftText rightText:(NSString *)rightText ;
 
 @end
@@ -27,6 +33,11 @@
 @protocol TutorialViewDelegate
 
 @optional
-- (void) tutorialView:(TutorialView *)tutorialView touchPinot:(CGPoint)touchPinot;
+/**
+ * @brief TutorialView Delegate: when touch in TutorialView
+ * @param touchPinot CGPoint, touch location.
+ * @param
+ */
+- (void) tutorialView:(TutorialView *)tutorialView touchPoint:(CGPoint)touchPoint;
 
 @end

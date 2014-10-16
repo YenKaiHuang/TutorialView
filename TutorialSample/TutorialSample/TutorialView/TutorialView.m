@@ -70,7 +70,7 @@
 //The event handling method
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer {
     CGPoint location = [recognizer locationInView:[recognizer.view superview]];
-    [self.delegate tutorialView:self touchPinot:location];
+    [self.delegate tutorialView:self touchPoint:location];
 }
 
 

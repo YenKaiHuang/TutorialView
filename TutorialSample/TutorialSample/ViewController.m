@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    myTutorialView = [[TutorialView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) LeftText:@"Tap this icon to edit device" rightText:@"Tap this icon to add remote control"];
+    myTutorialView = [[TutorialView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) LeftText:nil rightText:@"Tap this icon to add remote control"];
     myTutorialView.delegate = self;
     
     [self.view addSubview:myTutorialView];
@@ -30,7 +30,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) tutorialView:(TutorialView *)tutorialView touchPinot:(CGPoint)touchPinot{
+- (void) tutorialView:(TutorialView *)tutorialView touchPoint:(CGPoint)touchPoint{
     [myTutorialView removeFromSuperview];
 }
 
